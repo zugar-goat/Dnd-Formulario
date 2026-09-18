@@ -5,19 +5,14 @@
 :root {
     --bg-dark: #0f0d0e;
     --card-bg: rgba(26, 22, 24, 0.96);
-
     --border-color: #4b382c;
-
     --gold: #c8a878;
     --gold-light: #e3c99a;
-
     --text-main: #e5d9c7;
     --text-muted: #a89a89;
-
     --red-dark: #581f24;
     --red-light: #8b3535;
 }
-
 
 /* ========================================
    RESETEO
@@ -29,31 +24,22 @@
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
     font-family: Georgia, "Times New Roman", serif;
-
-    background:
-        radial-gradient(
-            ellipse at top,
-            #30221d 0%,
-            var(--bg-dark) 60%
-        );
-
+    background: radial-gradient(
+        ellipse at top,
+        #30221d 0%,
+        var(--bg-dark) 60%
+    );
     background-attachment: fixed;
-
     color: var(--text-main);
-
     min-height: 100vh;
-
     line-height: 1.6;
 }
-
 
 /* ========================================
    NAVEGACIÓN
@@ -61,80 +47,52 @@ body {
 
 header {
     background: rgba(12, 10, 11, 0.98);
-
     border-bottom: 1px solid var(--border-color);
-
     position: sticky;
-
     top: 0;
-
     z-index: 100;
 }
 
-
 .navbar {
     max-width: 1200px;
-
     margin: auto;
-
     padding: 20px 25px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
     gap: 30px;
 }
 
-
 .logo {
     color: var(--gold-light);
-
     font-size: 1.3rem;
-
     font-weight: bold;
-
     letter-spacing: 2px;
-
     white-space: nowrap;
 }
 
-
 .nav-links {
     list-style: none;
-
     display: flex;
-
     gap: 28px;
 }
 
-
 .nav-links a {
     text-decoration: none;
-
     color: var(--text-main);
-
     font-size: 1rem;
-
     transition: color 0.3s ease;
-
     padding-bottom: 8px;
 }
-
 
 .nav-links a:hover {
     color: var(--gold-light);
 }
 
-
 .nav-links a.active {
     color: var(--gold-light);
-
     border-bottom: 2px solid var(--red-light);
 }
-
 
 /* ========================================
    CONTENEDOR
@@ -142,14 +100,10 @@ header {
 
 .container {
     width: 90%;
-
     max-width: 1000px;
-
     margin: auto;
-
     padding: 70px 0;
 }
-
 
 /* ========================================
    INTRODUCCIÓN
@@ -157,45 +111,30 @@ header {
 
 .intro {
     text-align: center;
-
     margin-bottom: 45px;
 }
 
-
 .subtitle {
     color: var(--gold);
-
     font-size: 0.9rem;
-
     letter-spacing: 3px;
-
     margin-bottom: 18px;
 }
 
-
 .intro h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
-
     color: var(--gold-light);
-
     margin-bottom: 20px;
-
     line-height: 1.2;
 }
 
-
 .intro p:last-child {
     color: var(--text-muted);
-
     max-width: 650px;
-
     margin: auto;
-
     line-height: 1.8;
-
     font-size: 1rem;
 }
-
 
 /* ========================================
    FORMULARIO
@@ -203,17 +142,11 @@ header {
 
 .campaign-form {
     background: var(--card-bg);
-
     border: 1px solid var(--border-color);
-
     border-radius: 4px;
-
     padding: 40px;
-
-    box-shadow:
-        0 10px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
-
 
 /* ========================================
    SECCIONES
@@ -221,34 +154,23 @@ header {
 
 .form-section {
     padding-bottom: 35px;
-
     margin-bottom: 35px;
-
     border-bottom: 1px solid #332925;
 }
 
-
 .form-section h2 {
     color: var(--gold-light);
-
     font-size: 1.4rem;
-
     margin-bottom: 25px;
-
     padding-bottom: 10px;
-
     border-bottom: 1px solid #4a372c;
 }
 
-
 .form-grid {
     display: grid;
-
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
     gap: 25px;
 }
-
 
 /* ========================================
    CAMPOS
@@ -256,83 +178,56 @@ header {
 
 .form-group {
     display: flex;
-
     flex-direction: column;
-
     gap: 9px;
 }
 
-
 .form-group label {
     color: var(--text-main);
-
     font-size: 0.95rem;
 }
-
 
 input,
 select,
 textarea {
     width: 100%;
-
     background: #171416;
-
     color: var(--text-main);
-
     border: 1px solid #634b37;
-
     border-radius: 5px;
-
     padding: 13px 15px;
-
     font-family: Georgia, "Times New Roman", serif;
-
     font-size: 0.95rem;
-
     outline: none;
-
-    transition:
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 input::placeholder,
 textarea::placeholder {
     color: #766c62;
 }
 
-
 input:focus,
 select:focus,
 textarea:focus {
     border-color: var(--gold);
-
-    box-shadow:
-        0 0 8px rgba(200, 168, 120, 0.15);
+    box-shadow: 0 0 8px rgba(200, 168, 120, 0.15);
 }
-
 
 select {
     cursor: pointer;
 }
 
-
 select option {
     background: #171416;
-
     color: var(--text-main);
 }
 
-
 textarea {
     resize: vertical;
-
     min-height: 120px;
-
     line-height: 1.6;
 }
-
 
 /* ========================================
    PREFERENCIAS
@@ -340,45 +235,30 @@ textarea {
 
 .question {
     color: var(--text-muted);
-
     margin-bottom: 20px;
-
     line-height: 1.5;
 }
 
-
 .checkbox-group {
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 20px;
 }
 
-
 .checkbox-group label {
     display: flex;
-
     align-items: center;
-
     gap: 9px;
-
     color: var(--text-main);
-
     cursor: pointer;
 }
-
 
 .checkbox-group input {
     width: 17px;
-
     height: 17px;
-
     accent-color: var(--red-light);
-
     cursor: pointer;
 }
-
 
 /* ========================================
    BOTONES
@@ -386,90 +266,54 @@ textarea {
 
 .form-actions {
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     gap: 20px;
-
     flex-wrap: wrap;
-
     margin-top: 35px;
 }
 
-
 .submit-btn {
-    background:
-        linear-gradient(
-            135deg,
-            #71302f,
-            #4b1c21
-        );
-
+    background: linear-gradient(
+        135deg,
+        #71302f,
+        #4b1c21
+    );
     color: var(--gold-light);
-
     border: 1px solid var(--gold);
-
     border-radius: 4px;
-
     padding: 15px 35px;
-
     font-family: Georgia, "Times New Roman", serif;
-
     font-size: 1rem;
-
     cursor: pointer;
-
-    transition:
-        background 0.3s ease,
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .submit-btn:hover {
-    background:
-        linear-gradient(
-            135deg,
-            #8b3b38,
-            #612329
-        );
-
+    background: linear-gradient(
+        135deg,
+        #8b3b38,
+        #612329
+    );
     transform: translateY(-2px);
-
-    box-shadow:
-        0 5px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
-
 
 .reset-btn {
     background: transparent;
-
     color: var(--text-muted);
-
     border: 1px solid #4a372c;
-
     border-radius: 4px;
-
     padding: 14px 25px;
-
     font-family: Georgia, "Times New Roman", serif;
-
     cursor: pointer;
-
-    transition:
-        color 0.3s ease,
-        border-color 0.3s ease;
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
-
 
 .reset-btn:hover {
     color: var(--gold-light);
-
     border-color: var(--gold);
 }
-
 
 /* ========================================
    AVISO
@@ -477,14 +321,10 @@ textarea {
 
 .form-notice {
     text-align: center;
-
     color: #81766b;
-
     font-size: 0.8rem;
-
     margin-top: 20px;
 }
-
 
 /* ========================================
    PIE DE PÁGINA
@@ -492,71 +332,53 @@ textarea {
 
 footer {
     border-top: 1px solid var(--border-color);
-
     background: #0c0a0b;
-
     text-align: center;
-
     padding: 25px;
-
     color: var(--text-muted);
-
     font-size: 0.85rem;
 }
-
 
 /* ========================================
    RESPONSIVE
 ======================================== */
 
 @media (max-width: 700px) {
-
     .navbar {
         flex-direction: column;
-
         gap: 20px;
     }
 
-
     .nav-links {
         gap: 15px;
-
         flex-wrap: wrap;
-
         justify-content: center;
     }
 
-
     .container {
         width: 95%;
-
         padding: 40px 0;
     }
-
 
     .campaign-form {
         padding: 25px 20px;
     }
 
-
     .form-grid {
         grid-template-columns: 1fr;
     }
-
 
     .form-section h2 {
         font-size: 1.2rem;
     }
 
-
     .form-actions {
         flex-direction: column;
     }
-
 
     .submit-btn,
     .reset-btn {
         width: 100%;
     }
-
+}
 }
